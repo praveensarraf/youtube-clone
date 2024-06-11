@@ -1,0 +1,455 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #0f0f0f;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    width: 100%;
+    background: #0f0f0f;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    height: 60px;
+}
+
+header .logo{
+    display: flex;
+    align-items: center;
+}
+
+.left{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header .logo .youtube-logo{
+    text-decoration: none;
+    height: 80px;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    gap: 15px;
+    flex-direction: row;
+}
+
+.search form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 45px;
+    width: 100%;
+    border-radius: 40px;
+    border: 1px solid #303030;
+}
+
+.search input{
+    width: 600px;
+    padding: 0 4px 0 16px;
+    background-color: transparent;
+    border-radius: 40px 0 0 40px;
+    color: #fff;
+    min-width: 0;
+    border: none;
+    height: 99%;
+}
+
+.search input:focus{
+    outline: none;
+    border: 1px solid #065fd4;
+}
+
+.search form button {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 70px;
+    border: none;
+    border-radius: 0 40px 40px 0;
+    background-color: #ffffff15;
+}
+
+.material-icons {
+    color: #fff;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.mic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffffff15;
+}
+
+.mic:hover{
+    background-color: #ffffff40;
+}
+
+.tooltip{
+    position: absolute;
+    background-color: #4f4e4e;
+    color: #f2f2f2;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    bottom: -35px;
+    opacity: 0;
+    transition: opacity 0.55s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.mic:hover .tooltip,
+.search form button:hover .tooltip,
+.icons button:hover .tooltip,
+.logo a:hover .tooltip{
+    opacity: 1;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right{
+    position: absolute;
+    right: 0;
+}
+
+.btn {
+    padding: 13px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #ffffff15;
+}
+
+svg {
+    fill: currentColor;
+    color: #fff;
+}
+
+
+/* SideNav (Menu Button onClick) */
+
+.wrapper {
+    height: 100%;
+    position: relative;
+}
+
+.wrapper .menu-btn {
+    position: fixed;
+    left: 15px;
+    top: 7px;
+    color: grey;
+    height: 45px;
+    width: 45px;
+    z-index: 10;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.wrapper #btn:checked .menu-btn{
+    left: 20px;
+}
+
+.wrapper .menu-btn i{
+    position: absolute;
+    font-size: 23px;
+    transition: all 0.3s ease;
+}
+
+.wrapper #btn:checked ~ .menu-btn i.fa-bars {
+    opacity: 1;
+}
+
+#sidebar{
+    position: fixed;
+    background-color: #0f0f0f;
+    z-index: 10;
+    height: 100%;
+    width: 240px;
+    overflow: auto;
+    top: 50px;
+    left: -270px;
+    transition: all 0.3s ease;
+    scrollbar-width: none;
+}
+
+#sidebar:hover{
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.wrapper #btn:checked ~ #sidebar {
+    left: 0;
+}
+
+#sidebar .title {
+    margin: -10px;
+    text-align: center;
+    background: #0f0f0f;
+    font-weight: 600;
+    color: #fff;
+}
+
+.menu-group {
+    padding: 16px 10px;
+    border-bottom: 1px solid #333;
+    font-size: 1.4rem;
+    line-height: 1rem;
+    font-weight: 500;
+    color: #f1f1f1;
+}
+
+.menu-group-anchor{
+    text-decoration: none;
+    color: #f2f2f2;
+}
+
+.home-item{
+    background-color: #272727;
+    margin: 3px 0;
+}
+
+.home-item svg{
+    margin-right: 24px;
+}
+
+.menu-item{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.menu-item:hover{
+    background-color: #272727;
+}
+
+.subs:hover{
+    background: none;
+    cursor:auto;
+}
+
+.menu-item img, .mySvg svg {
+    margin-right: 24px;
+}
+
+.mySpann{
+    margin-left: 8px;
+    margin-right: 34px;
+}
+
+.subsImg{
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.subsImg img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.mySvgMore svg{
+    margin-right: 18px;
+}
+
+/* Side MENU (Main page) */
+
+.main-content {
+    position: fixed;
+    left: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    z-index: 5;
+    padding: auto 5px;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 11px;
+    color: #f2f2f2;
+    margin-top: 15px;
+    font-weight: 200;
+    background: #0f0f0f;
+}
+
+.main-content-btm{
+    text-decoration: none;
+    background: #0f0f0f;
+    margin: 1px 0;
+    color: #f2f2f2;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 80px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.main-content .main-content-btm button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content .main-content-btm .main-svg svg {
+    height: 23px;
+    width: 23px;
+    fill: #f1f1f1;
+}
+
+.main-content .main-content-btm .btn:hover{
+    background: transparent;
+}
+
+.main-content-btm:hover{
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+/* Media Query */
+
+@media screen and (max-width: 1250px){
+    .search input{
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 1150px){
+    .search input{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 950px){.search input{
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .search form{
+        border: none;
+    }
+
+    .search input{
+        display: none;
+    }
+
+    .search form button{
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .wrapper {
+        display: none;
+        overflow: hidden;
+    }
+
+    .side-bar {
+      width: 20%;
+    }
+
+    header .search,
+    header .right .videocam,
+    .you-btn {
+      display: none;
+    }
+
+    .connectivity,
+    .plus-btn {
+      visibility: visible;
+    }
+
+    .main-content {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      background-color: #0f0f0f;
+      width: 100%;
+      z-index: 10;
+      height: fit-content;
+      cursor: pointer;
+      padding-bottom: 12px;
+      font-size: 12px;
+    }
+
+    .video-title {
+      font-size: 13px;
+    }
+
+    .channel-name {
+      font-size: 12px;
+    }
+}
+  
+@media screen and (min-width: 651px) {
+  .main-content {
+    top: 45px;
+  }
+
+  .connectivity,
+  .search-magnifying-glass,
+  .plus-btn,
+  .my-avatar {
+    display: none;
+  }
+
+  .youtube-logo {
+    padding-left: 26px;
+    height: 24px;
+  }
+}

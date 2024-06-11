@@ -1,0 +1,152 @@
+a{
+    text-decoration: none;
+}
+.content{
+    position: relative;
+}
+
+.topBtns{ 
+    display: inline-flex;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-y: scroll; 
+}
+
+.topBtns::-webkit-scrollbar {
+    display: none;
+}
+
+.topBtns button.btn{
+    border-radius: 7px;
+    font-size: 15px;
+    width: auto;
+    height: 35px;
+    padding: 5px 12px;
+    margin: 0 4px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    background: #ffffff20;
+    color: #ffffff;
+}
+
+.topBtns button.btn:first-child{
+    background: #ffffff;
+    color: #000;
+}
+
+.topBtns button.btn:hover{
+    background: #ffffff40;
+}
+
+.topBtns button.btn:first-child:hover{
+    background: #ffffff;
+}
+
+.thumbBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+}
+
+.video-thumb{
+    border-radius: 8px;
+    width: 100%;
+}
+
+.video-thumb:hover {
+    cursor: pointer;
+}
+
+.video-timing{
+    position: absolute;
+    background: #00000080;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 550;
+    font-family: sans-serif;
+    padding: 2px 4px;
+    margin: 0 11px 11px 0;
+}
+
+.video-title {
+    position: relative;
+    line-height: 1.5rem;
+    font-weight: 500;
+    overflow: hidden;
+    display: block;
+    max-height: 3rem;
+    cursor: pointer;
+    -webkit-line-clamp: 2;
+}
+
+.channel-name {
+    color: #aaa;
+}
+
+.channel-logo {
+    max-width: 100px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.separator{
+    font-size: 0.8rem;
+    opacity: 0.6;
+    overflow: hidden;
+}
+
+.short-title {
+    position: relative;
+    line-height: 1.5rem;
+    font-weight: 500;
+    font-size: 15px;
+    overflow: hidden;
+    display: block;
+    max-height: 3rem;
+    cursor: pointer;
+    -webkit-line-clamp: 2;
+    color: #f2f2f2;
+}
+
+.short-dots button{
+   background-color: transparent;
+   border: none;
+   cursor: auto;
+}
+
+.short-views{
+    text-align: left;
+    color: #aaa;
+    font-size: 14px;
+}
+
+#shortShowBtn{
+    border: 1px solid #aaa;
+    border-radius: 25px;
+}
+
+#shortShowBtn:hover{
+    background: #ffffff30;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 650px){
+    .content{
+        position: relative;
+        top: 70px;
+        left: 0px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .content .myBody{
+        padding-left: 17px;
+        padding-right: 10px;
+    }
+}
