@@ -12,7 +12,7 @@ export default function Navbar({isChecked, onCheckboxChange}) {
         {/* Top Nav */}
         <header>
             <div className="logo left">
-                <a className="youtube-logo" href="/Home">
+                <a className="youtube-logo" href="https://www.youtube.com/">
                     <img src={`${process.env.PUBLIC_URL}/Images/svg/YouTube-White-Full-Color-Logo.wine.svg`} className="youtube-logo" alt="Youtube Logo" style={{cursor: 'pointer'}}/>
                     <div className="tooltip">YouTube Home</div>
                 </a>
@@ -43,8 +43,9 @@ export default function Navbar({isChecked, onCheckboxChange}) {
                     <div className="tooltip">Create</div>
                 </button>
 
-                <button className="btn mx-3 fs-5 connectivity p-0">
-                    <i className="fa-solid fa-rss" style={{color: '#ffffff'}}></i>
+                <button className="btn fs-5 connectivity p-0">
+                    <i className="fa-brands fa-chromecast" style={{color: '#ffffff'}}></i>
+                    <div className="tooltip">Connect to a device</div>
                 </button>
                 
                 <button className="btn me-1">
@@ -53,15 +54,17 @@ export default function Navbar({isChecked, onCheckboxChange}) {
                             d="M10 20h4c0 1.1-.9 2-2 2s-2-.9-2-2zm10-2.65V19H4v-1.65l2-1.88v-5.15C6 7.4 7.56 5.1 10 4.34v-.38c0-1.42 1.49-2.5 2.99-1.76.65.32 1.01 1.03 1.01 1.76v.39c2.44.75 4 3.06 4 5.98v5.15l2 1.87zm-1 .42-2-1.88v-5.47c0-2.47-1.19-4.36-3.13-5.1-1.26-.53-2.64-.5-3.84.03C8.15 6.11 7 7.99 7 10.42v5.47l-2 1.88V18h14v-.23z">
                         </path>
                     </svg>
+                    <span className="badge">9+</span>
                     <div className="tooltip">Notifications</div>
                 </button>
 
-                <a href='imgg'>
+                <a href='https://www.youtube.com/@PraveenSarraf_'>
                     <img alt="Avatar img" className="rounded-circle you-btn mx-3" height="35px" width="35px" src={`${process.env.PUBLIC_URL}/Images/praveen.jpg`}/>
                 </a>
 
                 <span style={{color: '#ffffff', fontSize: '20px'}}>
                     <i className="fa-solid fa-magnifying-glass mx-3 search-magnifying-glass"></i>
+                    <div className="tooltip">Search</div>
                 </span>
             </div>
 
@@ -482,7 +485,7 @@ export default function Navbar({isChecked, onCheckboxChange}) {
 
         <div className="side-panel">
             <div className="main-content">
-                <a className="main-content-btm" href='/Home'>
+                <a className="main-content-btm" href='https://www.youtube.com/'>
                     <button className="main-svg btn">
                         <svg viewBox="0 0 24 24">
                             <g>
