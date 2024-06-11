@@ -99,7 +99,7 @@ export default function HomeBody({isChecked}) {
                     <div className="col-12 col-sm-6 col-md-4">
                         <div className="video-card mt-5 text-light">
                             <a href='https://youtu.be/bukN2P7WpwE?si=T8mx7WnbW2pbHUym' className='thumbBox'>
-                                <img src={`${process.env.PUBLIC_URL}/Images/namamishamishan.jpg`} className="img-fluid m-1 video-thumb" alt="content-thumbnail"/>
+                                <img src={`${process.env.PUBLIC_URL}/Images/namamiShamishan.jpg`} className="img-fluid m-1 video-thumb" alt="content-thumbnail"/>
                                 <span className='video-timing'>01:09:52</span>
                             </a>
                             <div className="d-flex">

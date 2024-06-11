@@ -212,7 +212,7 @@ export default function Navbar({isChecked, onCheckboxChange}) {
 
                             <a href='https://www.youtube.com/@ANINewsIndia' className='menu-group-anchor'>
                                 <div className="menu-item subsImg">
-                                    <img src={`${process.env.PUBLIC_URL}/Images/channelLogo/ani.jpg`} alt=''/>
+                                    <img src={`${process.env.PUBLIC_URL}/Images/channelLogo/ANI.jpg`} alt=''/>
                                     <span>ANI</span>
                                 </div>
                             </a>
